@@ -11,7 +11,8 @@
     "license": "AGPL-3",
     "depends": ["account"],
     "data": [
-        "views/report_invoice_with_payments_custom_receipt.xml"
+        "views/report_invoice_with_payments_custom_receipt.xml",
+        "views/report_invoice_document_custom_receipt.xml"
     ],
     "installable": True,
 }
