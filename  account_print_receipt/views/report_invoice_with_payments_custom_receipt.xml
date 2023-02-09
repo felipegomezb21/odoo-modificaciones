@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template
+            id="report_invoice_with_payments_custom_receipt"
+            inherit_id="account.report_invoice_with_payments"
+            primary="True"
+        ></template>
+    </data>
+</odoo>
