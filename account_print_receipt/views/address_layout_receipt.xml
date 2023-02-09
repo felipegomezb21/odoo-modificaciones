@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <template id="address_layout_receipt">
+            <t t-set="colclass" t-value="('col-md-12' if report_type == 'html' else 'col-12') + ' ml-auto'"/>
+                <t t-if="address" style="text-align: center;">
+                    <div style="text-align: center;">*********************************</div>
+                    <div style="text-align: center;">*********************************</div>
+                    <div class="address" style="display: block;" >
+                        <t t-if="information_block">
+                            <t t-set="colclass" t-value="'col-12'"/>
+                            <div name="information_block" class="col-12">
+                                <t t-raw="information_block"/>
+                            </div>
+                        </t>
+                        <div name="address" t-att-class="colclass">
+                            <t t-raw="address"/>
+                            <div style="font-size:130%; text-align: center;" t-if="o.partner_id.phone"> Tel: <span t-field="o.partner_id.phone"/></div>
+                            <div style="font-size:130%; text-align: center;" t-if="o.partner_id.mobile"> Cel: <span t-field="o.partner_id.mobile"/></div>
+                        </div>
+                    </div>
+                    <div class="row zero_min_height">
+                    <div class="col-12">
+                        <div style="border-bottom: 3px solid black;"/>
+                    </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+</odoo>
