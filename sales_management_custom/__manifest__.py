@@ -11,7 +11,7 @@
     "license": "AGPL-3",
     "depends": ["sale_management"],
     "data": [
-        "views/sale.view_order_form_views"
+        "views/sale.view_order_form_views.xml",
     ],
     "installable": True,
 }
