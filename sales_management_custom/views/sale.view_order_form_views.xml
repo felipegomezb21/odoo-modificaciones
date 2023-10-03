@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>  
+    <record id="sale.view_order_form.custom" model="ir.ui.view">
+        <field name="model">sale.order.form</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <!-- Required fields validity_date -->
+            <xpath expr="//field[@name='validity_date']" position="attributes">
+                <attribute name="attrs">{'required': True}</attribute>
+            </xpath>
+            <!-- Required fields commitment_date -->
+            <xpath expr="//field[@name='commitment_date']" position="attributes">
+                <attribute name="attrs">{'required': True}</attribute>
+            </xpath>
+            <!-- Disable create product from order form-->
+            <xpath expr="//field[@name='order_line']//tree/field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_open': True, 'no_create_edit': True,'no_create': True}</attribute>
+            </xpath>
+            <!-- Disable create partner from order form-->
+            <xpath expr="//group[@name='partner_details']/field[@name='partner_id']" position="attributes">
+                <attribute name="options">{&quot;always_reload&quot;: True, 'no_create': True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
