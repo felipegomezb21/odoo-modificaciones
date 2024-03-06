@@ -5,7 +5,7 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
-            <!-- Required fields validity_date and readoly false -->
+            <!-- Required fields validity_date and readoly false. -->
             <xpath expr="//field[@name='validity_date']" position="attributes">
                 <attribute name="attrs">{'required': True, 'readonly': False}</attribute>
             </xpath>
