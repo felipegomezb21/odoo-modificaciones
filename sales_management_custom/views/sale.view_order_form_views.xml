@@ -7,8 +7,7 @@
         <field name="arch" type="xml">
             <!-- Required fields validity_date and readoly false -->
             <xpath expr="//field[@name='validity_date']" position="attributes">
-                <attribute name="attrs">{'required': True}</attribute>
-                <attribute name="attrs">{'readonly': False}</attribute>
+                <attribute name="attrs">{'required': True, 'readonly': False}</attribute>
             </xpath>
             <!-- Required fields commitment_date -->
             <xpath expr="//field[@name='commitment_date']" position="attributes">
