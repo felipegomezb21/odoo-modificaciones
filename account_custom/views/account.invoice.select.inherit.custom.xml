@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>  
     <record id="account_invoice_select_inherit_custom" model="ir.ui.view">
-        <field name="name">account.invoice.select.inherit.custom</field>
+        <field name="name">account.account_invoice_select_inherit_custom</field>
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_account_invoice_filter" />
         <field name="arch" type="xml">
             <!-- Filter by tags -->
             <xpath expr="//filter[@name='myinvoices']" position="after">
-                    <separator/>
-                    <filter name="distributor" string="Distributor" domain="[['partner_id.category_id.name','=','Distribuidor']]"/>
-                    <filter name="maquila" string="Maquila" domain="[['partner_id.category_id.name','=','Maquila']]"/>
-                    <filter name="direct_customer" string="Direct Customer" domain="['&','&',['partner_id.category_id.name','!=','Distribuidor'],['partner_id.category_id.name','!=','Maquila']]"/>
-                </xpath>
+                <separator/>
+                <filter name="distributor" string="Distributor" domain="[['partner_id.category_id.name','=','Distribuidor']]"/>
+                <filter name="maquila" string="Maquila" domain="[['partner_id.category_id.name','=','Maquila']]"/>
+                <!-- <filter name="direct_customer" string="Direct Customer" domain="['&','&',['partner_id.category_id.name','!=','Distribuidor'],['partner_id.category_id.name','!=','Maquila']]"/> -->
+             </xpath>
         </field>
     </record>
 </odoo>
