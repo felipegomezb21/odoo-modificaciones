@@ -10,7 +10,7 @@
                 <separator/>
                 <filter name="distributor" string="Distributor" domain="[['partner_id.category_id.name','=','Distribuidor']]"/>
                 <filter name="maquila" string="Maquila" domain="[['partner_id.category_id.name','=','Maquila']]"/>
-                <filter name="direct_customer" string="Direct Customer" domain="[['partner_id.category_id.name','not in',['Distribuidor','Maquila']]]"/>
+                <filter name="direct_customer" string="Direct Customer" domain="['|', ('partner_id.category_id.name','=',False), ('partner_id.category_id.name','not in',['Distribuidor', 'Maquila'])]"/>
              </xpath>
         </field>
     </record>
