@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>  
+    <record id="account_invoice_report_search_inherit_custom" model="ir.ui.view">
+        <field name="name">account.invoice.report.search_inherit_custom</field>
+        <field name="model">account.invoice.report</field>
+        <field name="inherit_id" ref="account.view_account_invoice_report_search" />
+        <field name="arch" type="xml">
+            <!-- Filter by tags -->
+            <xpath expr="//filter[@name='myinvoices']" position="after">
+                <separator/>
+                <filter name="distributor" string="Distributor" domain="[['partner_id.category_id.name','=','Distribuidor']]"/>
+                <filter name="maquila" string="Maquila" domain="[['partner_id.category_id.name','=','Maquila']]"/>
+                <filter name="direct_customer" string="Direct Customer" domain="['|', ('partner_id.category_id','=',False), ('partner_id.category_id.name','not in',['Distribuidor', 'Maquila'])]"/>
+             </xpath>
+        </field>
+    </record>
+</odoo>

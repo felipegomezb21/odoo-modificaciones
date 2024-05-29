@@ -12,6 +12,7 @@
     "depends": ["account"],
     "data": [
         "views/account.invoice.select.inherit.custom.xml",
+        "views/account.invoice.report.search.inherit.custom.xml"
     ],
     "installable": True,
 }
