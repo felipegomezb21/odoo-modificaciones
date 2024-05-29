@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="account.view_account_invoice_report_search" />
         <field name="arch" type="xml">
             <!-- Filter by tags -->
-            <xpath expr="//filter[@name='myinvoices']" position="after">
+            <xpath expr="//filter[@name='my_invoice']" position="after">
                 <separator/>
                 <filter name="distributor" string="Distributor" domain="[['partner_id.category_id.name','=','Distribuidor']]"/>
                 <filter name="maquila" string="Maquila" domain="[['partner_id.category_id.name','=','Maquila']]"/>
