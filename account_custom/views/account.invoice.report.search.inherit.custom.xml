@@ -9,8 +9,9 @@
             <xpath expr="//filter[@name='my_invoice']" position="after">
                 <separator/>
                 <filter name="distributor" string="Distributor" domain="[['partner_id.category_id.name','=','Distribuidor']]"/>
+                <filter name="TaT" string="TaT" domain="[['partner_id.category_id.name','=','Tienda a Tienda']]"/>
                 <filter name="maquila" string="Maquila" domain="[['partner_id.category_id.name','=','Maquila']]"/>
-                <filter name="direct_customer" string="Direct Customer" domain="['|', ('partner_id.category_id','=',False), ('partner_id.category_id.name','not in',['Distribuidor', 'Maquila'])]"/>
+                <filter name="direct_customer" string="Direct Customer" domain="['|', ('partner_id.category_id','=',False), ('partner_id.category_id.name','not in',['Distribuidor', 'Maquila', 'Tienda a Tienda'])]"/>
              </xpath>
         </field>
     </record>
