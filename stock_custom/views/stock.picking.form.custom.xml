@@ -10,7 +10,9 @@
                 <!-- This is the original line for filter from group user domicilirio -->
                 <!-- <attribute name="domain">[('groups_id', '=', 90)]</attribute> --> 
                 <!-- This is the new line for filter from tags -->
-                <attribute name="domain">[("category_id.name", "in" ,["Domiciliario"])]</attribute> 
+                <attribute name="domain">[("category_id.name", "in" ,["Domiciliario"])]</attribute>
+                <!-- Required fields user_id -->
+                <attribute name="attrs">{'required': True}</attribute>
             </xpath>
         </field>
     </record>
