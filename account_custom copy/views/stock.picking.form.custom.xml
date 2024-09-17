@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="stock_picking_form_custom" model="ir.ui.view">
+        <field name="name">stock.picking.form.custom</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.picking.form" />
+        <field name="arch" type="xml">
+            <!-- Filter responsable by tags -->
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <!--<attribute name="domain">[('groups_id', '=', 90)]</attribute>--> <!-- This is the original line for filter from group user domicilirio -->
+                <attribute name="domain">[["category_id.name","in",["Domiciliario"]]]</attribute> <!-- This is the new line for filter from tags -->
+            </xpath>
+        </field>
+    </record>
+</odoo>
