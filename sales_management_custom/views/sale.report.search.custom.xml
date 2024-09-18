@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>  
+    <record id="view_order_product_search_custom" model="ir.ui.view">
+        <field name="name">sale.view_order_product_search.custom</field>
+        <field name="model">sale.report</field>
+        <field name="inherit_id" ref="sale.view_order_product_search" />
+        <field name="arch" type="xml">
+            <!-- Filter by tags -->
+            <xpath expr="//filter[@name='Sales']" position="after">
+                <separator/>
+                <filter name="distributor" string="Distributor" domain="[['partner_id.category_id.name','=','Distribuidor']]"/>
+                <filter name="TaT" string="TaT" domain="[['partner_id.category_id.name','=','Tienda a Tienda']]"/>
+                <filter name="maquila" string="Maquila" domain="[['partner_id.category_id.name','=','Maquila']]"/>
+                <filter name="direct_customer" string="Direct Customer" domain="['|', ('partner_id.category_id','=',False), ('partner_id.category_id.name','not in',['Distribuidor', 'Maquila', 'Tienda a Tienda'])]"/>
+             </xpath>
+        </field>
+    </record>
+</odoo>

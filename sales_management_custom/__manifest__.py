@@ -12,6 +12,8 @@
     "depends": ["sale_management"],
     "data": [
         "views/sale.view_order_form_views.xml",
+        "views/sale.order.list.select.custom.xml",
+        "views/sale.report.search.custom.xml"
     ],
     "installable": True,
 }
