@@ -12,7 +12,7 @@
     "depends": ["stock","stock_picking_volume"],
     "data": [
         "views/stock.picking.form.custom.xml",
-        "views/stock.picking.tree.custom"
+        "views/stock.picking.tree.custom.xml"
     ],
     "installable": True,
 }
