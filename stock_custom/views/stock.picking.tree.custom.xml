@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="stock_picking_tree_custom" model="ir.ui.view">
+        <field name="name">stock.picking.tree.custom</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="volume" optional="show"/> <!-- Add volume field -->
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="optional">show</attribute> <!-- Make user_id field optional -->
+                <attribute name="widget">many2one_avatar_user</attribute> 
+            </xpath>
+        </field>
+    </record>
+</odoo>

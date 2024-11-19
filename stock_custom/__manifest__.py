@@ -9,9 +9,10 @@
     "author": "Luis Felipe Gomez Botero",
     "website": "https://github.com/felipegomezb21/odoo-modificaciones.git",
     "license": "AGPL-3",
-    "depends": ["stock"],
+    "depends": ["stock","stock_picking_volume"],
     "data": [
-        "views/stock.picking.form.custom.xml"
+        "views/stock.picking.form.custom.xml",
+        "views/stock.picking.tree.custom"
     ],
     "installable": True,
 }
