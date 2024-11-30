@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="dboard.sales_custom" model="ir.ui.view">
+    <record id="view_board_sales_custom" model="ir.ui.view">
         <field name="name">Indicadores Ventas</field>
         <field name="model">board.board</field>
         <field name="arch" type="xml">
