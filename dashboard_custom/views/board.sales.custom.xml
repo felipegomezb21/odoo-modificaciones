@@ -1,28 +1,42 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="view_board_sales_custom" model="ir.ui.view">
+    <!-- Registro del tablero -->
+    <record id="custom_dashboard_sales_view" model="board.board">
+        <field name="name">Sales Dashboard</field>
+        <field name="view_id" ref="custom_dashboard_form_sales_view"/>
+    </record>
+
+    <!-- Vista formulario para el tablero -->
+    <record id="custom_dashboard_form_sales_view" model="ir.ui.view">
         <field name="name">Indicadores Ventas</field>
         <field name="model">board.board</field>
         <field name="arch" type="xml">
-            <board>
-                <column>
-                    <field name="name" widget="statinfo" options="{'icon': 'fa-users'}"/>
-                </column>
-                <column>
-                    <field name="name" widget="statinfo" options="{'icon': 'fa-cogs'}"/>
-                </column>
-            </board>
+            <form string="Custom Dashboard">
+                <sheet>
+                    <board style="2-1"> <!-- Define el diseño de columnas -->
+                        <!-- Primera columna -->
+                        <column>
+                        </column>
+                        <!-- Segunda columna -->
+                        <column>
+                        </column>
+                    </board>
+                </sheet>
+            </form>
         </field>
     </record>
 
-    <record id="action_board_sales_custom" model="ir.actions.act_window">
-        <field name="name">Indicadores Ventas</field>
+    <!-- Menú para acceder al tablero -->
+    <menuitem id="menu_custom_sales_dashboard" name="Custom Sales Dashboard"
+              action="action_custom_sales_dashboard"
+              parent="base.menu_custom" sequence="10"/>
+
+    <!-- Acción para el tablero -->
+    <record id="action_custom_sales_dashboard" model="ir.actions.act_window">
+        <field name="name">Custom Sales Dashboard</field>
         <field name="res_model">board.board</field>
         <field name="view_mode">form</field>
-        <field name="view_id" ref="view_board_sales_custom"/>
-        <field name="target">self</field>
+        <field name="view_id" ref="custom_dashboard_form_sales_view"/>
+        <field name="target">current</field>
     </record>
-
-    <menuitem id="menu_board_sales_custom" name="Indicadores Ventas" action="action_board_sales_custom" sequence="1"/>
 </odoo>
-
