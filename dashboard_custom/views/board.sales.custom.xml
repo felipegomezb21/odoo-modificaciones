@@ -28,7 +28,7 @@
     </record>
 
     <!-- Menú para acceder al tablero -->
-    <menuitem id="menu_custom_sales_dashboard" name="Indicadores Ventas"
+<!--     <menuitem id="menu_custom_sales_dashboard" name="Indicadores Ventas"
               action="board.action_custom_sales_dashboard"
-              parent="base.menu_board_root" sequence="10"/>
+              parent="base.menu_board_root" sequence="10"/> -->
 </odoo>
