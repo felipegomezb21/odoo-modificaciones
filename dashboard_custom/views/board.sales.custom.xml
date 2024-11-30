@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <record id="view_board_sales_custom" model="ir.ui.view">
         <field name="name">Indicadores Ventas</field>
         <field name="model">board.board</field>
         <field name="arch" type="xml">
-            <dashboard>
-                <board>
-                    <column>
-                        <field name="name" widget="statinfo" options="{'icon': 'fa-users'}"/>
-                    </column>
-                    <column>
-                        <field name="name" widget="statinfo" options="{'icon': 'fa-cogs'}"/>
-                    </column>
-                </board>
-            </dashboard>
+            <board>
+                <column>
+                    <field name="name" widget="statinfo" options="{'icon': 'fa-users'}"/>
+                </column>
+                <column>
+                    <field name="name" widget="statinfo" options="{'icon': 'fa-cogs'}"/>
+                </column>
+            </board>
         </field>
     </record>
 
