@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <!-- Registro del tablero -->
-    <record id="custom_dashboard_sales_view" model="board.board">
-        <field name="name">Sales Dashboard</field>
-        <field name="view_id" ref="custom_dashboard_form_sales_view"/>
-    </record>
-
     <!-- Vista formulario para el tablero -->
     <record id="custom_dashboard_form_sales_view" model="ir.ui.view">
         <field name="name">Indicadores Ventas</field>
         <field name="model">board.board</field>
         <field name="arch" type="xml">
-            <form string="Custom Dashboard">
-                <sheet>
+            <form string="Custom Sales Dashboard">
                     <board style="2-1"> <!-- Define el diseño de columnas -->
                         <!-- Primera columna -->
                         <column>
@@ -21,7 +14,6 @@
                         <column>
                         </column>
                     </board>
-                </sheet>
             </form>
         </field>
     </record>
