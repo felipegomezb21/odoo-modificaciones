@@ -6,7 +6,7 @@
     <record id="action_facturado_mes_vs_mes_anterior" model="ir.actions.act_window">
         <field name="name">Facturado Mes vs Mes Anterior</field>
         <field name="view_mode">graph</field>
-        <field name="res_model">account.invoice.report.graph</field>
+        <field name="res_model">account.invoice.report</field>
         <field name="context">
             {
                 'lang': 'es_CO',
