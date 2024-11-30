@@ -18,9 +18,9 @@
                     'comparisonId': 'previous_period',
                     'fieldName': 'invoice_date',
                     'fieldDescription': 'Fecha factura',
-                    'range': ['&', ['invoice_date', '>=', '2024-11-01'], ['invoice_date', '<=', '2024-11-30']],
+                    'range': ['&amp;', ['invoice_date', '&gt;=', '2024-11-01'], ['invoice_date', '&lt;=', '2024-11-30']],
                     'rangeDescription': 'noviembre 2024',
-                    'comparisonRange': ['&', ['invoice_date', '>=', '2024-10-01'], ['invoice_date', '<=', '2024-10-31']],
+                    'comparisonRange': ['&amp;', ['invoice_date', '&gt;=', '2024-10-01'], ['invoice_date', '&lt;=', '2024-10-31']],
                     'comparisonRangeDescription': 'octubre 2024'
                 },
                 'graph_measure': 'price_subtotal',
@@ -31,7 +31,7 @@
         </field>
         <field name="domain">
             [
-                '&', '&', 
+                '&amp;', '&amp;', 
                 ['state', 'not in', ['draft', 'cancel']], 
                 '|', 
                 ['move_type', '=', 'out_invoice'], 
