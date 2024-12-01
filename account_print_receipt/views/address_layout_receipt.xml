@@ -1,5 +1,6 @@
-<?xml version="1.0"?>
-<t t-name="account_print_receipt.address_layout_receipt">
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <template id="address_layout_receipt">
             <t t-set="colclass" t-value="('col-md-12' if report_type == 'html' else 'col-12') + ' ml-auto'"/>
                 <t t-if="address" style="text-align: center;">
                     <div style="text-align: center;">*********************************</div>
@@ -23,4 +24,5 @@
                         </div>
                     </div>
                 </t>
-        </t>
+        </template>
+</odoo>

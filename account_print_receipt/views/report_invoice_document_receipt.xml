@@ -1,5 +1,6 @@
-<?xml version="1.0"?>
-<t t-name="account_print_receipt.report_invoice_document_receipt">
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <template id="report_invoice_document_receipt">
             <t t-call="account_print_receipt.external_layout_receipt">
                 <t t-set="o" t-value="o.with_context(lang=lang)"/>
                 <t t-set="address">
@@ -226,3 +227,5 @@
                 </div>
             </t>
         </t>
+        </template>
+</odoo>
