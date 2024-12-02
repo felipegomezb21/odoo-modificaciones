@@ -204,10 +204,7 @@
                         Please use the following communication for your payment : <b><span t-field="o.payment_reference"/></b>
                     </p> -->
 
-                    <div class="row zero_min_height">
-                        <div class="col-12">
-                            <div style="border-bottom: 1px solid black;"/>
-                        </div>
+                    
                     
                     <p t-if="o.invoice_payment_term_id" name="payment_term">
                         <span style="font-size:129%;" t-field="o.invoice_payment_term_id.note"/>
