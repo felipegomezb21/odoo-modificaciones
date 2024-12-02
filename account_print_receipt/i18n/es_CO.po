@@ -1,0 +1,189 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_print_receipt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-02 00:56+0000\n"
+"PO-Revision-Date: 2024-12-02 00:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid ""
+"<span style=\"font-size:129%;\" groups=\"account.group_show_line_subtotals_tax_excluded\">Amount</span>\n"
+"                                    <span style=\"font-size:129%;\" groups=\"account.group_show_line_subtotals_tax_included\">Total Price</span>"
+msgstr ""
+"<span style=\"font-size:129%;\" groups=\"account.group_show_line_subtotals_tax_excluded\">Total</span>\n"
+"                                    <span style=\"font-size:129%;\" groups=\"account.group_show_line_subtotals_tax_included\">Precio Total</span>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<span style=\"font-size:129%;\">Disc.%</span>"
+msgstr "<span style=\"font-size:129%;\">Desc.%</span>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<span>Description</span>"
+msgstr "<span>Producto</span>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<span>Qty</span>"
+msgstr "<span>Cant.</span>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<span>Taxes</span>"
+msgstr "<span>Imp</span>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<span>Unit Price</span>"
+msgstr "<span>Precio</span>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr "<strong class=\"mr16\">Subtotal</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid ""
+"<strong class=\"text-center\">Scan me with your banking "
+"app.</strong><br/><br/>"
+msgstr ""
+
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong style=\"font-size:160%;\">Amount Due</strong>"
+msgstr "<strong style=\"font-size:160%;\">Importe Adeudado</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong style=\"font-size:160%;\">Subtotal</strong>"
+msgstr "<strong style=\"font-size:160%;\">Subtotal</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong style=\"font-size:160%;\">Total</strong>"
+msgstr "<strong style=\"font-size:160%;\">Total</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong>Credit Note Date:</strong>"
+msgstr "<strong>Fecha Nota Credito:</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong>Customer Code:</strong>"
+msgstr "<strong>Codigo Cliente:</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Fecha:</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong>Due Date:</strong>"
+msgstr "<strong>Fecha Vencimiento:</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong>Incoterm: </strong>"
+msgstr ""
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong>Invoice Date:</strong>"
+msgstr "<strong>Fecha Factura:</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong>Receipt Date:</strong>"
+msgstr "<strong>Fecha Expedición:</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>Referencia:</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "<strong>Source:</strong>"
+msgstr "<strong>Origen:</strong>"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "Cancelled Invoice"
+msgstr "Factura Cancelada"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.address_layout_receipt
+msgid "Cel:"
+msgstr ""
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "Credit Note"
+msgstr "Nota Crédito"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "Draft Invoice"
+msgstr "Borrador"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.external_layout_clean_receipt
+msgid "Logo"
+msgstr ""
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "Paid on"
+msgstr "Pagado en"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "Tax ID"
+msgstr "ID"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.address_layout_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.external_layout_clean_receipt
+msgid "Tel:"
+msgstr ""
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "Vendor Bill"
+msgstr "Factura del Proveedor"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "Vendor Credit Note"
+msgstr "Nota de Crédito del Proveedor"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "comment"
+msgstr "Notas"
+
+#. module: account_print_receipt
+#: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
+msgid "on"
+msgstr "de"
