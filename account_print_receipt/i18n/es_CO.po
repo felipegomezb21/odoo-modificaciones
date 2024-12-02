@@ -18,11 +18,11 @@ msgstr ""
 #. module: account_print_receipt
 #: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
 msgid ""
-"<span style=\"font-size:129%;\" groups=\"account.group_show_line_subtotals_tax_excluded\">Amount</span>\n"
-"                                    <span style=\"font-size:129%;\" groups=\"account.group_show_line_subtotals_tax_included\">Total Price</span>"
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Amount</span>\n"
+"                                    <span groups=\"account.group_show_line_subtotals_tax_included\">Total Price</span>"
 msgstr ""
-"<span style=\"font-size:129%;\" groups=\"account.group_show_line_subtotals_tax_excluded\">Total</span>\n"
-"                                    <span style=\"font-size:129%;\" groups=\"account.group_show_line_subtotals_tax_included\">Precio Total</span>"
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Total</span>\n"
+"                                    <span groups=\"account.group_show_line_subtotals_tax_included\">Precio Total</span>"
 
 #. module: account_print_receipt
 #: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
@@ -95,7 +95,7 @@ msgstr "<strong>Fecha:</strong>"
 #. module: account_print_receipt
 #: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
 msgid "<strong>Due Date:</strong>"
-msgstr "<strong>Fecha Vencimiento:</strong>"
+msgstr "<strong>Vencimiento:</strong>"
 
 #. module: account_print_receipt
 #: model_terms:ir.ui.view,arch_db:account_print_receipt.report_invoice_document_receipt
