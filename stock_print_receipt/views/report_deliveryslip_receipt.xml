@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_deliveryslip_receipt">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="stock.report_delivery_document" t-lang="o.partner_id.lang"/>
+        </t>
+    </template>
+</odoo>
