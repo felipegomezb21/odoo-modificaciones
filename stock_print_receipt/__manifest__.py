@@ -11,11 +11,8 @@
     "license": "AGPL-3",
     "depends": ["stock"],
     "data": [
-        #"views/report_invoice_with_payments_custom_receipt.xml",
+        "views/report_action_deliveryslip_receipt.xml",
         "views/report_deliveryslip_receipt.xml"
-        #"views/external_layout_receipt.xml",
-        #"views/external_layout_clean_receipt.xml",
-        #"views/address_layout_receipt.xml"
     ],
     "installable": True,
 }
