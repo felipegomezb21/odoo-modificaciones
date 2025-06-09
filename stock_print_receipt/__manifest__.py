@@ -12,6 +12,7 @@
     "depends": ["stock"],
     "data": [
         "views/report_action_deliveryslip_receipt.xml",
+        "views/report_delivery_document_receipt.xml",
         "views/report_deliveryslip_receipt.xml"
     ],
     "installable": True,
