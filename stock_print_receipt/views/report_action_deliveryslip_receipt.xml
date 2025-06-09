@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <report 
-    id="stock.action_report_delivery_receipt"
+    id="action_report_delivery_receipt"
     model="stock.picking" 
     string="Vale de Entrega (Recibo)"
     report_type="qweb-pdf"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <template id="external_layout_clean_receipt">
-    <div style="width:72mm; font-size:10px; line-height:1.2; padding:0; margin:0 auto;">
+    <div style="width:78mm; font-size:16px; line-height:1.2; padding:0; margin:0 auto;">
 
       <!-- Header con logo -->
       <div class="text-center" style="margin-bottom: 4mm;">
@@ -13,6 +13,27 @@
         <div t-if="company.phone">Tel: <span t-field="company.phone"/></div>
         <div t-if="company.email"><span t-field="company.email"/></div>
       </div>
+
+      <!-- Datos del cliente -->
+        <div class="mt-2 mb-2" style="font-size: 10px;">
+        <t t-if="o.partner_id">
+            <strong>Cliente:</strong> <span t-field="o.partner_id.name"/><br/>
+            <t t-if="o.partner_id.vat">
+            <strong>NIT:</strong> <span t-field="o.partner_id.vat"/><br/>
+            </t>
+            <t t-if="o.partner_id.phone">
+            <strong>Tel:</strong> <span t-field="o.partner_id.phone"/><br/>
+            </t>
+        </t>
+        </div>
+
+        <!-- Aquí insertamos el address layout -->
+        <t t-set="address">
+        <t t-call="partner_address" t-lang="o.env.context.get('lang') or 'en_US'" t-set="partner" t-value="o.partner_id"/>
+        </t>
+        <t t-call="account_print_receipt.address_layout_receipt"/>
+
+
 
       <!-- Cuerpo del reporte -->
       <div t-att-data-oe-model="o and o._name"

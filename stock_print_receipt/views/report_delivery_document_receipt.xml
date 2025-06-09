@@ -6,9 +6,9 @@
             <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
             <style>
             .thermal-receipt {
-                font-size: 10px;
+                font-size: 16px;
                 line-height: 1.2;
-                width: 72mm;
+                width: 78mm;
                 margin: 0 auto;
             }
             .receipt-table th,

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="address_layout_receipt">
+        <t t-set="colclass" t-value="'col-12 text-center'"/>
+        <t t-if="address">
+            <!-- Separador superior -->
+            <div style="text-align: center; font-size: 110%;">******************************</div>
+
+            <!-- Dirección del cliente -->
+            <div class="address" style="text-align: center; font-size: 110%;">
+                <t t-if="information_block">
+                    <div name="information_block" class="col-12">
+                        <t t-raw="information_block"/>
+                    </div>
+                </t>
+                <div name="address" t-att-class="colclass">
+                    <t t-raw="address"/>
+                    <div t-if="o.partner_id.city"><span t-esc="o.partner_id.city"/></div>
+                    <div t-if="o.partner_id.state_id"><span t-esc="o.partner_id.state_id.name"/></div>
+                    <div t-if="o.partner_id.country_id"><span t-esc="o.partner_id.country_id.name"/></div>
+                    <div t-if="o.partner_id.phone">📞 <span t-field="o.partner_id.phone"/></div>
+                    <div t-if="o.partner_id.mobile">📱 <span t-field="o.partner_id.mobile"/></div>
+                </div>
+            </div>
+
+            <!-- Separador inferior -->
+            <div class="row zero_min_height mt-1 mb-1">
+                <div class="col-12">
+                    <div style="border-bottom: 1px dashed #000;"/>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

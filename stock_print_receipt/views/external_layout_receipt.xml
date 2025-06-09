@@ -15,7 +15,7 @@
       </t>
     </t>
 
-    <!-- Siempre llama a tu versión personalizada -->
-    <t t-call="stock_print_receipt.external_layout_clean_receipt"/>
+    <t t-if="company.external_report_layout_id" t-call="stock_print_receipt.external_layout_clean_receipt"><t t-raw="0"/></t>
+    <t t-else="else" t-call="stock_print_receipt.external_layout_clean_receipt"><t t-raw="0"/></t>
   </template>
 </odoo>
