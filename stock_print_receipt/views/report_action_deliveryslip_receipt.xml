@@ -7,6 +7,6 @@
     report_type="qweb-pdf"
     name="stock_print_receipt.report_deliveryslip_receipt" 
     file="stock_print_receipt.report_deliveryslip_receipt"
-    print_report_name="'Albarán de entrega - %s - %s' % (object.partner_id.name or '', object.name)"
+    print_report_name="'Vale de entrega - %s - %s' % (object.partner_id.name or '', object.name)"
   />
 </odoo>

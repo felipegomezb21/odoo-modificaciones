@@ -5,7 +5,7 @@
 
       <!-- Header con logo -->
       <div class="text-center" style="margin-bottom: 4mm;">
-        <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-width: 200px; height: auto;" alt="Logo"/>
+        <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-width: 200px; height: auto; margin-bottom: 20px;" alt="Logo"/>
         <div style="font-weight:bold;" t-if="company.name" t-field="company.name"/>
         <div t-if="company.vat">
           <t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/>
@@ -15,23 +15,23 @@
       </div>
 
       <!-- Datos del cliente -->
-        <div class="mt-2 mb-2" style="font-size: 10px;">
+      <div class="mt-2 mb-2">
         <t t-if="o.partner_id">
-            <strong>Cliente:</strong> <span t-field="o.partner_id.name"/><br/>
-            <t t-if="o.partner_id.vat">
-            <strong>NIT:</strong> <span t-field="o.partner_id.vat"/><br/>
-            </t>
-            <t t-if="o.partner_id.phone">
-            <strong>Tel:</strong> <span t-field="o.partner_id.phone"/><br/>
-            </t>
+          <strong>Cliente:</strong> <span style="font-weight:bold;" t-field="o.partner_id.name"/><br/>
+          <t t-if="o.partner_id.vat">
+            <strong>CC/NIT:</strong> <span t-field="o.partner_id.vat"/><br/>
+          </t>
+          <t t-if="o.partner_id.street">
+            <strong>Dirección:</strong> <span t-field="o.partner_id.street"/>
+            <t t-if="o.partner_id.street2">, <span t-field="o.partner_id.street2"/></t><br/>
+            <t t-if="o.partner_id.city"><span t-field="o.partner_id.city"/></t>
+            <t t-if="o.partner_id.state_id">, <span t-field="o.partner_id.state_id.name"/></t>
+            <t t-if="o.partner_id.zip"> <span t-field="o.partner_id.zip"/></t><br/>
+          </t>
+          <t t-if="o.partner_id.phone"><strong>Tel: </strong><span t-field="o.partner_id.phone"/></t>
+          <t t-if="o.partner_id.mobile"><strong>Cel: </strong><span t-field="o.partner_id.mobile"/></t>
         </t>
-        </div>
-
-        <!-- Aquí insertamos el address layout -->
-        <t t-set="address">
-        <t t-call="partner_address" t-lang="o.env.context.get('lang') or 'en_US'" t-set="partner" t-value="o.partner_id"/>
-        </t>
-        <t t-call="account_print_receipt.address_layout_receipt"/>
+      </div>
 
 
 
@@ -41,6 +41,32 @@
            t-att-data-oe-lang="o and o.env.context.get('lang')">
         <t t-raw="0"/>
       </div>
+
+      <!-- Datos logísticos -->
+      <t t-if="o.volume or o.weight">
+        <div>
+          <div t-if="o.volume">
+            <strong>Volumen:</strong> <span t-field="o.volume"/> <span t-field="o.volume_uom_name"/>
+          </div>
+          <div t-if="o.weight">
+            <strong>Peso:</strong> <span t-field="o.weight"/> <span t-field="o.weight_uom_name"/>
+          </div>
+        </div>
+      </t>
+      
+      <!-- Datos Domiciliario -->
+      <t t-if="o.user_id.name">
+        <div>
+            <strong>Responsable Entrega:</strong> <span t-field="o.user_id.name"/> 
+        </div>
+      </t>
+
+      <!-- Notas -->
+      <t t-if="o.note">
+        <div style="margin-top: 20px;">
+            <strong>Notas:</strong> <span t-field="o.note"/> 
+        </div>
+      </t>
 
       <!-- Pie de página reducido -->
       <div class="text-center" style="margin-top:6mm; font-size:9px;" t-if="company.report_footer">
