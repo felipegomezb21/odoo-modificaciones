@@ -2,7 +2,7 @@
 <odoo>
     <template id="report_deliveryslip_receipt">
         <t t-foreach="docs" t-as="o">
-            <t t-call="stock.report_delivery_document" t-lang="o.partner_id.lang"/>
+            <t t-call="stock_print_receipt.report_delivery_document_receipt" t-lang="o.partner_id.lang"/>
         </t>
     </template>
 </odoo>
