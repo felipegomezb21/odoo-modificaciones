@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="external_layout">
+    <t t-if="not o" t-set="o" t-value="doc"/>
+
+    <t t-if="not company">
+      <t t-if="company_id">
+        <t t-set="company" t-value="company_id"/>
+      </t>
+      <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+        <t t-set="company" t-value="o.company_id.sudo()"/>
+      </t>
+      <t t-else>
+        <t t-set="company" t-value="res_company"/>
+      </t>
+    </t>
+
+    <!-- Siempre llama a tu versión personalizada -->
+    <t t-call="stock_print_receipt.external_layout_clean_receipt"/>
+  </template>
+</odoo>
